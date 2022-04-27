@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Subscribes table
+      author: MIRALI ABBASOV
+      changes:
+        - createTable:
+            tableName: subscribe
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: api_key
+                  type: varchar(250)
+                  defaultValue: null
+              - column:
+                  name: topics_name
+                  type: varchar(250)
+              - column:
+                  name: topics_category
+                  type: varchar(250)
+              - column:
+                  name: created_date
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: expire_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(250)
+              - column:
+                  name: count
+                  type: bigint
+
+
+
+

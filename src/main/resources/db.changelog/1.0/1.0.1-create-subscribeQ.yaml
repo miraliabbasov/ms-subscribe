@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create SubscribeQ table
+      author: MIRALI ABBASOV
+      changes:
+        - createTable:
+            tableName: subscribe_q
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: api_key
+                  type: varchar(250)
+              - column:
+                  name: topics_name
+                  type: varchar(250)
+              - column:
+                  name: topics_category
+                  type: varchar(250)
+
+
+
+
+
+
